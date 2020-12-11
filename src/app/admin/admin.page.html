@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>admin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-list>
+
+  <ion-item>
+    <ion-label>processor Count</ion-label>
+    <ion-input type="number" [(ngModel)]='pros.pc'></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Brand</ion-label>
+    <ion-input type="text" [(ngModel)]='pros.brand'></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Display Size</ion-label>
+    <ion-input type="text" [(ngModel)]='pros.disSize'></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Hard</ion-label>
+    <ion-input type="text" [(ngModel)]='pros.hard'></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Operating System</ion-label>
+    <ion-input type="text" [(ngModel)]='pros.os'></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Photo</ion-label>
+    <ion-input type="text" [(ngModel)]='pros.photo'></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Type</ion-label>
+    <ion-input type="text" [(ngModel)]='pros.type'></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Ram</ion-label>
+    <ion-input type="number" [(ngModel)]='pros.ram'></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Price</ion-label>
+    <ion-input type="number" [(ngModel)]='pros.price'></ion-input>
+  </ion-item>
+
+  <ion-button (click)="add()" expand="block" fill="clear" shape="round">
+    Fuckin ADD
+  </ion-button>
+
+</ion-list>
+
+
+  <ion-list>
+    <ion-item-sliding *ngFor='let x of dataSrv.items | async; let i = index'>
+      <ion-item>
+      {{x.photo}}<br>
+      {{x.price}}
+      </ion-item>
+      <ion-item-options side="start">
+        <ion-item-option routerLink='/edit-item/{{i}}'>Edit</ion-item-option>
+      </ion-item-options>
+  
+      <ion-item-options side="end">
+        <ion-item-option (click)="DeleteItem(x)" color='danger'>Delete</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+ 
+
+</ion-list>
+</ion-content>

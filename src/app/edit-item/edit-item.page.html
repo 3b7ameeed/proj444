@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>editItem</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label>processor Count</ion-label>
+      <ion-input type="number" [(ngModel)]='pron.pc'></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Brand</ion-label>
+      <ion-input type="text" [(ngModel)]='pron.brand'></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Display Size</ion-label>
+      <ion-input type="text" [(ngModel)]='pron.disSize'></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Hard</ion-label>
+      <ion-input type="text" [(ngModel)]='pron.hard'></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Operating System</ion-label>
+      <ion-input type="text" [(ngModel)]='pron.os'></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Photo</ion-label>
+      <ion-input type="text" [(ngModel)]='pron.photo'></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Type</ion-label>
+      <ion-input type="text" [(ngModel)]='pron.type'></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Ram</ion-label>
+      <ion-input type="number" [(ngModel)]='pron.ram'></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Price</ion-label>
+      <ion-input type="number" [(ngModel)]='pron.price'></ion-input>
+    </ion-item>
+  
+    <ion-button (click)="update()" expand="block" fill="clear" shape="round">
+      Fuckin Update
+    </ion-button>
+  
+  </ion-list>
+</ion-content>
